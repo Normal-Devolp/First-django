@@ -39,8 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'blog.apps.BlogConfig',
-    'user.apps.UserConfig',
+    'post'
 
     
 ]
@@ -128,6 +127,7 @@ STATIC_URL = '/static/'
 # make static folder for all project
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
-    'D:\project in (env)\env_1\First-django\static',
 
 ]
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_URL = '/media/'
