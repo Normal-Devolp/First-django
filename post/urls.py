@@ -7,6 +7,6 @@ app_name = 'post'
 
 urlpatterns = [
  
-    path('', views.post_list),
-    path('', views.post_detail),
+    path('', views.PostList.as_view(), name='post-list'),
+    path('<int:pk>/', views.PostDetail.as_view()),
 ]
