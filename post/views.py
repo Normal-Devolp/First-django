@@ -5,11 +5,16 @@ from .models import Post
 
 class PostList(ListView):
     model = Post
-
+    context_object_name = 'all_posts'
+    ordering = ['created_at']
+    queryset = Post.objects.filter(active=True)
+    
 
 
 class PostDetail(DetailView):
     model = Post
+
+
 
 
 
